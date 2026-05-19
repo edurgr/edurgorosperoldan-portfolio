@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edur Gorospe — Performance & Brand Marketing</title>
+<meta name="description" content="Performance and brand marketing manager. Paid media, creative production, data-driven campaigns for global consumer brands.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1A1814;
+  --paper:#EFEAE0;
+  --warm:#E5DFD2;
+  --mid:#9A9080;
+  --muted:#6B655B;
+  --copper:#B85C3C;
+  --copper2:#C97A5A;
+  --dark:#14130F;
+  --pine:#0F0E0B;
+  --line-dark:rgba(239,234,224,.10);
+  --line-light:rgba(26,24,20,.10);
+  --serif:'DM Serif Display', serif;
+  --sans:'DM Sans', sans-serif;
+  --mono:'Space Mono', monospace;
+  --gutter:clamp(24px, 4vw, 64px);
+  --max:1440px;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--sans);
+  background:var(--paper);
+  color:var(--ink);
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer}
+
+.eyebrow{
+  font-family:var(--mono);
+  font-size:10px;font-weight:700;
+  letter-spacing:0.26em;text-transform:uppercase;
+  color:var(--copper);
+  display:inline-flex;align-items:center;gap:14px;
+}
+.eyebrow::before{content:"";width:28px;height:1px;background:currentColor}
+.eyebrow.no-rule::before{display:none}
+.folio{
+  font-family:var(--mono);
+  font-size:10px;font-weight:700;
+  letter-spacing:0.32em;color:var(--muted);
+}
+
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:9000;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  opacity:.04;mix-blend-mode:multiply;
+}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:0 var(--gutter);height:72px;
+  display:flex;justify-content:space-between;align-items:center;
+  background:transparent;
+  transition:background .4s ease, border-color .4s ease, backdrop-filter .4s ease;
+  border-bottom:1px solid transparent;
+}
+nav.scrolled{
+  background:rgba(8,8,8,.78);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom-color:rgba(255,255,255,.06);
+}
+nav.scrolled .nav-name,
+nav.scrolled .nav-links a{color:rgba(239,234,224,.65)}
+nav.scrolled .nav-name{color:var(--paper)}
+.nav-name{
+  font-family:var(--serif);font-size:18px;
+  letter-spacing:.01em;color:var(--paper);
+  display:flex;align-items:baseline;gap:8px;
+}
+.nav-name em{font-style:normal;color:var(--paper)}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{
+  font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+  color:rgba(239,234,224,.55);transition:color .2s;
+  position:relative;padding:6px 0;
+}
+.nav-links a::after{
+  content:"";position:absolute;left:0;bottom:0;
+  width:0;height:1px;background:var(--copper);
+  transition:width .25s ease;
+}
+.nav-links a:hover{color:var(--copper)}
+.nav-links a:hover::after{width:100%}
+
+/* HERO */
+.hero{
+  min-height:100vh;background:var(--ink);
+  display:grid;grid-template-columns:1.25fr .75fr;
+  padding-top:72px;position:relative;overflow:hidden;isolation:isolate;
+}
+.hero-bg{position:absolute;inset:0;z-index:0;overflow:hidden;background:#14130F}
+.hero-bg svg{
+  position:absolute;inset:0;width:100%;height:100%;
+  display:block;
+}
+.hero-bg::after{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse at 70% 20%, rgba(184,92,60,.10) 0%, transparent 50%),
+    linear-gradient(100deg, rgba(20,19,15,.78) 0%, rgba(20,19,15,.52) 45%, rgba(20,19,15,.30) 72%, rgba(20,19,15,.50) 100%),
+    linear-gradient(180deg, rgba(20,19,15,.30) 0%, transparent 30%, transparent 65%, rgba(20,19,15,.70) 100%);
+}
+.hero::after{
+  content:"";position:absolute;left:0;right:0;bottom:0;height:1px;
+  background:linear-gradient(90deg,transparent 0%, rgba(184,92,60,.5) 30%, rgba(184,92,60,.5) 70%, transparent 100%);
+  z-index:3;
+}
+.hero-left,.hero-right{position:relative;z-index:2}
+.hero-left{
+  display:flex;flex-direction:column;justify-content:space-between;
+  padding:72px var(--gutter) 96px;
+}
+.hero-marks{
+  display:flex;justify-content:space-between;align-items:flex-start;
+  color:var(--muted);
+}
+.hero-marks .left{display:flex;flex-direction:column;gap:6px}
+.hero-marks .small{
+  font-family:var(--mono);font-size:10px;letter-spacing:.26em;text-transform:uppercase;
+  color:rgba(239,234,224,.55);
+}
+.hero-marks .small em{font-style:normal;color:var(--copper)}
+.hero-name-block{display:flex;flex-direction:column;margin-top:auto;position:relative}
+.hero-eyebrow{
+  font-family:var(--mono);font-size:10px;letter-spacing:.28em;text-transform:uppercase;
+  color:var(--copper);margin-bottom:28px;
+  display:flex;align-items:center;gap:14px;
+}
+.hero-eyebrow::before{content:"";width:36px;height:1px;background:var(--copper)}
+.hero-name{
+  font-family:var(--serif);font-size:clamp(56px,8.2vw,128px);
+  line-height:.92;color:var(--paper);letter-spacing:-.018em;
+  margin-bottom:36px;display:flex;flex-direction:column;
+}
+.hero-name .ln{display:block}
+.hero-name .ln.roldan{font-style:italic;color:var(--paper)}
+.hero-descriptor{
+  font-family:var(--serif);font-style:italic;
+  font-size:clamp(20px,1.8vw,28px);line-height:1.35;
+  color:rgba(239,234,224,.85);max-width:600px;margin-bottom:48px;
+}
+.hero-descriptor strong{
+  font-style:normal;font-family:var(--sans);
+  color:var(--paper);font-weight:500;
+}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+
+.hero-right{
+  position:relative;overflow:hidden;
+  background:linear-gradient(180deg,#F4EFE3 0%, #E8E1D2 100%);
+  display:flex;align-items:flex-end;justify-content:center;padding:0;
+}
+.hero-right::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:1px;
+  background:rgba(184,92,60,.25);z-index:3;
+}
+.hero-right .portrait{position:absolute;inset:0;overflow:hidden}
+.hero-right .portrait img{
+  width:100%;height:100%;object-fit:cover;object-position:center 20%;
+  filter:contrast(1.02);
+}
+.hero-right .portrait::after{
+  content:"";position:absolute;inset:0;
+  background:
+    linear-gradient(180deg, transparent 55%, rgba(20,19,15,.18) 100%),
+    linear-gradient(270deg, transparent 70%, rgba(20,19,15,.10) 100%);
+  pointer-events:none;
+}
+
+.btn{
+  font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;
+  padding:18px 28px;display:inline-flex;align-items:center;gap:14px;
+  transition:all .25s ease;border:1px solid transparent;position:relative;
+}
+.btn .arrow{display:inline-block;transition:transform .25s ease}
+.btn:hover .arrow{transform:translateX(6px)}
+.btn-primary{background:var(--copper);color:var(--paper)}
+.btn-primary:hover{background:var(--copper2)}
+.btn-ghost{border-color:rgba(239,234,224,.22);color:rgba(239,234,224,.7)}
+.btn-ghost:hover{border-color:var(--copper);color:var(--copper)}
+
+.hero-anim{opacity:1}
+body.js .hero-anim{opacity:0;transform:translateY(20px);animation:fadeUp .9s cubic-bezier(.2,.7,.2,1) forwards}
+body.js .hero-marks{animation-delay:.05s}
+body.js .hero-eyebrow{animation-delay:.2s}
+body.js .hero-name{animation-delay:.35s}
+body.js .hero-descriptor{animation-delay:.65s}
+body.js .hero-actions{animation-delay:.78s}
+body.js .hero-right > *{opacity:0;animation:fadeIn 1s ease forwards;animation-delay:.4s}
+@keyframes fadeUp{to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{to{opacity:1}}
+
+.brands{
+  background:var(--dark);padding:44px 0;
+  border-top:1px solid rgba(255,255,255,.05);
+  border-bottom:1px solid rgba(255,255,255,.05);
+  position:relative;overflow:hidden;
+}
+.brands-head{
+  padding:0 var(--gutter);max-width:var(--max);margin:0 auto 22px;
+  display:flex;justify-content:space-between;align-items:center;
+}
+.brands-head .label{
+  font-family:var(--mono);font-size:10px;letter-spacing:.28em;text-transform:uppercase;
+  color:rgba(239,234,224,.4);display:flex;align-items:center;gap:14px;
+}
+.brands-head .label::before{content:"";width:24px;height:1px;background:rgba(184,92,60,.7)}
+.brands-head .count{
+  font-family:var(--mono);font-size:10px;letter-spacing:.28em;text-transform:uppercase;
+  color:rgba(239,234,224,.3);
+}
+.brands-marquee{
+  display:flex;white-space:nowrap;gap:64px;
+  animation:scroll 38s linear infinite;width:max-content;
+}
+.brands-marquee:hover{animation-play-state:paused}
+.brands-marquee span{
+  font-family:var(--serif);font-size:clamp(40px,5vw,72px);
+  letter-spacing:.04em;color:rgba(239,234,224,.22);line-height:1;
+  transition:color .25s;
+}
+.brands-marquee span:hover{color:rgba(239,234,224,.7)}
+.brands-marquee .sep{color:rgba(184,92,60,.55);font-size:clamp(20px,2vw,32px);align-self:center}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+section{position:relative}
+.section-top{
+  display:flex;justify-content:space-between;align-items:flex-end;
+  margin-bottom:80px;gap:48px;
+}
+.section-top .lead{max-width:560px;line-height:1.55;color:var(--muted);font-size:14px}
+.section-title{
+  font-family:var(--serif);font-size:clamp(52px,6.5vw,108px);
+  line-height:.95;letter-spacing:-.01em;
+}
+.section-title em{font-style:italic;color:var(--copper)}
+.on-dark .section-title{color:var(--paper)}
+.on-dark .section-title em{color:var(--copper2)}
+
+/* ABOUT */
+.about{background:var(--paper);padding:140px var(--gutter)}
+.about-inner{
+  max-width:var(--max);margin:0 auto;
+  display:grid;grid-template-columns:.85fr 1.6fr;gap:120px;align-items:start;
+}
+.about-left{position:sticky;top:120px}
+.about-left .eyebrow{margin-bottom:32px}
+.about-left h2{
+  font-family:var(--serif);font-size:clamp(56px,6vw,96px);
+  line-height:.92;letter-spacing:-.01em;
+}
+.about-left h2 em{font-style:italic;color:var(--copper)}
+.about-right{padding-top:8px;display:flex;flex-direction:column;gap:56px}
+.about-text{
+  font-size:clamp(16px,1.2vw,18px);line-height:1.85;
+  color:var(--ink);max-width:620px;
+  display:flex;flex-direction:column;gap:24px;
+}
+.about-text strong{font-weight:600}
+
+.about-stats{display:flex;flex-direction:column;gap:18px;max-width:680px}
+.about-stats-head{
+  display:flex;justify-content:space-between;align-items:baseline;
+  padding-bottom:14px;border-bottom:1px solid var(--line-light);
+}
+.about-stats-head .folio{color:rgba(26,24,20,.35)}
+.about-stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.about-stats-row .stat-cell{
+  padding:18px 18px 0 18px;border-right:1px solid var(--line-light);
+  display:flex;flex-direction:column;gap:6px;
+  align-items:center;text-align:center;
+}
+.about-stats-row .stat-cell:last-child{border-right:none;padding-right:0}
+.about-stats-row .stat-val{
+  font-family:var(--serif);font-size:clamp(28px,3.2vw,44px);
+  line-height:1;color:var(--ink);letter-spacing:-.005em;
+}
+.about-stats-row .stat-val em{font-style:normal;color:var(--copper)}
+.about-stats-row .stat-lbl{
+  font-family:var(--mono);font-size:9px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--muted);
+}
+
+.about-grid{
+  display:grid;grid-template-columns:1fr 1fr;gap:1px;
+  background:rgba(0,0,0,.08);border:1px solid rgba(0,0,0,.08);
+  max-width:680px;
+}
+.about-cell{padding:28px 28px 30px;background:var(--warm);position:relative}
+.about-cell-num{
+  position:absolute;top:14px;right:18px;
+  font-family:var(--mono);font-size:9px;letter-spacing:.2em;color:rgba(0,0,0,.25);
+}
+.about-cell-label{
+  font-family:var(--mono);font-size:9px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--copper);margin-bottom:14px;
+}
+.about-cell-val{font-family:var(--serif);font-size:17px;line-height:1.45;color:var(--ink)}
+.about-cell-val small{
+  display:block;font-family:var(--sans);font-size:13px;color:var(--muted);
+  margin-top:4px;font-weight:400;
+}
+
+/* WORK */
+.work{background:var(--ink);padding:160px var(--gutter);color:var(--paper)}
+.work-inner{max-width:var(--max);margin:0 auto}
+.work .section-top{align-items:flex-end}
+.work .section-top .col-l{display:flex;flex-direction:column;gap:24px;max-width:760px}
+.work .section-top .col-r{display:flex;flex-direction:column;gap:14px;text-align:right;align-items:flex-end}
+.work-lead{font-size:15px;line-height:1.65;color:rgba(239,234,224,.55);max-width:340px}
+.work-count{font-family:var(--serif);font-size:64px;line-height:1;color:var(--copper2)}
+.work-count small{font-family:var(--mono);font-size:10px;color:var(--muted);letter-spacing:.22em;text-transform:uppercase;display:block;margin-top:6px}
+
+.campaigns{display:grid;grid-template-columns:1fr 1fr;gap:48px 32px}
+.campaign{
+  display:flex;flex-direction:column;background:transparent;
+  text-decoration:none;color:inherit;
+  opacity:0;transform:translateY(22px);
+  transition:opacity .8s ease, transform .8s ease;
+}
+.campaign.visible{opacity:1;transform:translateY(0)}
+.campaign:nth-child(even){margin-top:64px}
+.campaign-cover{
+  position:relative;aspect-ratio:4/5;overflow:hidden;
+  background:
+    repeating-linear-gradient(135deg, rgba(239,234,224,.05) 0 2px, transparent 2px 16px),
+    linear-gradient(180deg,#1F1D18 0%, #14130F 100%);
+  border:1px solid rgba(239,234,224,.08);
+  display:flex;flex-direction:column;justify-content:space-between;
+  padding:24px;margin-bottom:24px;
+  transition:border-color .35s ease, transform .6s ease;
+}
+.campaign:hover .campaign-cover{border-color:var(--copper)}
+.campaign-cover img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;z-index:0;
+}
+.campaign-cover::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg, rgba(20,19,15,.30) 0%, transparent 35%, transparent 55%, rgba(20,19,15,.7) 100%);
+  z-index:1;
+}
+.campaign-cover > *{position:relative;z-index:2}
+.campaign-info{display:flex;flex-direction:column;gap:14px}
+.campaign-meta{
+  display:flex;align-items:center;gap:14px;
+  font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--copper);
+}
+.campaign-meta .dot{width:3px;height:3px;border-radius:50%;background:rgba(239,234,224,.3)}
+.campaign-meta .type{color:rgba(239,234,224,.55)}
+.campaign-info h3{
+  font-family:var(--serif);font-size:clamp(26px,2.4vw,38px);
+  line-height:1.05;letter-spacing:-.005em;color:var(--paper);font-weight:400;
+}
+.campaign-info p{
+  font-size:14px;line-height:1.65;color:rgba(239,234,224,.55);max-width:520px;
+}
+.campaign-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
+.c-tag{
+  font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;
+  padding:5px 11px;border:1px solid rgba(239,234,224,.14);
+  color:rgba(239,234,224,.5);transition:all .2s;
+}
+.campaign:hover .c-tag{border-color:rgba(184,92,60,.4);color:rgba(239,234,224,.75)}
+.campaign-actions{
+  display:flex;gap:0;margin-top:16px;
+  border-top:1px solid rgba(239,234,224,.10);padding-top:16px;
+}
+.campaign-action{
+  font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--paper);display:inline-flex;align-items:center;gap:10px;
+  padding:10px 18px 10px 0;transition:color .2s, gap .2s;
+}
+.campaign-action .arrow{transition:transform .2s}
+.campaign-action:hover{color:var(--copper2);gap:14px}
+.campaign-action:hover .arrow{transform:translateX(4px)}
+.campaign-action.yt{color:var(--copper2)}
+.campaign-action.yt:hover{color:var(--copper)}
+
+/* TIMELINE */
+.timeline{background:var(--paper);padding:160px var(--gutter)}
+.timeline-inner{max-width:var(--max);margin:0 auto}
+.timeline-head{
+  display:grid;grid-template-columns:.9fr 1.6fr;gap:120px;
+  margin-bottom:80px;align-items:end;
+}
+.timeline-head .col-r{
+  display:flex;flex-direction:column;gap:24px;padding-bottom:8px;max-width:520px;
+}
+.timeline-head .col-r p{font-size:15px;line-height:1.7;color:var(--muted)}
+.tl-items{display:flex;flex-direction:column;border-top:1px solid rgba(0,0,0,.1)}
+.tl-item{
+  display:grid;grid-template-columns:.9fr 1.6fr;gap:120px;
+  padding:44px 0;border-bottom:1px solid rgba(0,0,0,.1);
+  opacity:0;transform:translateY(16px);
+  transition:opacity .7s ease, transform .7s ease;position:relative;
+}
+.tl-item.visible{opacity:1;transform:translateY(0)}
+.tl-year-block{
+  display:flex;flex-direction:column;gap:8px;
+  font-family:var(--mono);font-size:13px;letter-spacing:.12em;
+  color:var(--copper);padding-top:4px;
+}
+.tl-year-block .tag{
+  font-family:var(--mono);font-size:9px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--muted);
+}
+.tl-content{display:flex;flex-direction:column;gap:14px;max-width:640px}
+.tl-content h3{
+  font-family:var(--serif);font-size:clamp(26px,2.6vw,38px);
+  line-height:1.1;letter-spacing:-.005em;color:var(--ink);font-weight:400;
+}
+.tl-company{
+  font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--muted);
+}
+.tl-desc{font-size:14px;line-height:1.75;color:#3a3a38}
+
+/* SKILLS */
+.skills{background:var(--warm);padding:140px var(--gutter);border-top:1px solid rgba(0,0,0,.06)}
+.skills-inner{
+  max-width:var(--max);margin:0 auto;
+  display:grid;grid-template-columns:.85fr 1.6fr;gap:120px;align-items:start;
+}
+.skills-left{position:sticky;top:120px;display:flex;flex-direction:column;gap:24px}
+.skills h2{
+  font-family:var(--serif);font-size:clamp(52px,5.5vw,84px);
+  line-height:.95;letter-spacing:-.01em;color:var(--ink);
+}
+.skills h2 em{font-style:italic;color:var(--copper)}
+.skills-left p{font-size:14px;line-height:1.65;color:var(--muted);max-width:280px;margin-top:12px}
+.skills-right{display:flex;flex-direction:column;gap:48px}
+.skill-group{
+  display:flex;flex-direction:column;gap:18px;
+  padding-bottom:36px;border-bottom:1px solid rgba(0,0,0,.08);
+}
+.skill-group:last-child{border-bottom:none}
+.skill-group-head{display:flex;justify-content:space-between;align-items:baseline}
+.skill-group-label{
+  font-family:var(--mono);font-size:10px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--copper);
+}
+.skill-group-num{
+  font-family:var(--mono);font-size:9px;letter-spacing:.22em;color:rgba(0,0,0,.25);
+}
+.skill-pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{
+  font-family:var(--sans);font-size:13px;font-weight:500;
+  padding:10px 18px;
+  background:rgba(184,92,60,.08);
+  border:1px solid rgba(184,92,60,.28);
+  color:var(--ink);
+  transition:all .2s ease;
+}
+.pill:hover{
+  background:var(--ink);
+  color:var(--paper);
+  border-color:var(--ink);
+}
+
+/* CONTACT */
+.contact{background:var(--ink);padding:80px var(--gutter);color:var(--paper)}
+.contact-compact{
+  max-width:var(--max);margin:0 auto;
+  display:flex;align-items:center;justify-content:space-between;gap:48px;
+}
+.contact-left{flex-shrink:0}
+.contact h2{
+  font-family:var(--serif);font-size:clamp(40px,5vw,64px);
+  line-height:.9;letter-spacing:-.01em;color:var(--paper);
+}
+.contact h2 em{font-style:italic;color:var(--copper2)}
+.contact-row{display:flex;gap:2px;flex:1;justify-content:flex-end}
+.contact-chip{
+  display:flex;flex-direction:column;gap:6px;
+  padding:24px 32px;background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.06);
+  text-decoration:none;transition:background .25s, border-color .25s;
+}
+a.contact-chip:hover{background:rgba(255,255,255,.08);border-color:var(--copper)}
+.contact-chip-label{
+  font-family:var(--mono);font-size:9px;letter-spacing:.26em;text-transform:uppercase;
+  color:var(--copper);
+}
+.contact-chip-val{
+  font-family:var(--serif);font-size:18px;line-height:1.2;
+  color:var(--paper);transition:color .2s;white-space:nowrap;
+}
+a.contact-chip:hover .contact-chip-val{color:var(--copper2)}
+
+footer{
+  background:var(--pine);padding:64px var(--gutter) 36px;
+  color:rgba(239,234,224,.5);border-top:1px solid rgba(255,255,255,.05);
+}
+.footer-inner{
+  max-width:var(--max);margin:0 auto;
+  display:grid;grid-template-columns:1fr auto 1fr;gap:32px;align-items:center;
+}
+.footer-name{font-family:var(--serif);font-size:20px;color:var(--paper)}
+.footer-name em{font-style:italic;color:var(--paper)}
+.footer-links{display:flex;gap:28px;justify-content:center}
+.footer-links a{
+  font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+  color:rgba(239,234,224,.4);transition:color .2s;
+}
+.footer-links a:hover{color:var(--paper)}
+.footer-meta{
+  font-family:var(--mono);font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+  color:rgba(239,234,224,.3);text-align:right;
+}
+
+.fade-up{opacity:0;transform:translateY(22px);transition:opacity .8s ease, transform .8s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+@media(max-width:1100px){
+  .about-inner,.timeline-head,.tl-item,.skills-inner{gap:64px}
+  .section-top{flex-direction:column;align-items:flex-start;gap:20px}
+  .work .section-top .col-r{align-items:flex-start;text-align:left}
+}
+@media(max-width:960px){
+  :root{--gutter:20px}
+  nav{height:auto;padding:12px 20px;flex-wrap:wrap;gap:8px}
+  .nav-name{font-size:14px;white-space:nowrap;flex-shrink:0;width:100%}
+  .nav-links{gap:16px;flex-wrap:wrap;width:100%;padding-bottom:4px}
+  .nav-links a{font-size:9px;letter-spacing:.18em}
+  .hero{grid-template-columns:1fr;min-height:auto;padding-top:56px}
+  .hero-left{padding:36px 20px 32px}
+  .hero-marks{display:none}
+  .hero-name{font-size:clamp(48px,13vw,88px);margin-bottom:24px}
+  .hero-descriptor{font-size:clamp(17px,4.2vw,22px);margin-bottom:24px}
+  .hero-actions{flex-direction:column;gap:10px;width:100%}
+  .hero-actions .btn{width:100%;justify-content:center;text-align:center}
+  .hero-right{position:relative;min-height:110vw;max-height:700px;padding:0}
+  .hero-right .portrait{position:absolute;inset:0}
+  .hero-right .portrait img{width:100%;height:100%;object-fit:cover;object-position:center 25%}
+  .hero-right .portrait::after{background:none}
+  .brands-head{padding:0 20px;flex-direction:column;align-items:flex-start;gap:14px}
+  .about,.work,.timeline,.skills,.contact{padding:72px 20px}
+  .about-inner{grid-template-columns:1fr;gap:40px}
+  .about-left{position:static}
+  .about-grid{grid-template-columns:1fr 1fr}
+  .section-top{margin-bottom:40px}
+  .timeline-head{grid-template-columns:1fr}
+  .tl-item{grid-template-columns:1fr;gap:14px;padding:28px 0}
+  .skills-inner{grid-template-columns:1fr;gap:40px}
+  .skills-left{position:static}
+  .campaigns{grid-template-columns:1fr;gap:32px}
+  .campaign:nth-child(even){margin-top:0}
+  .campaign-cover{aspect-ratio:3/4}
+  .contact-compact{flex-direction:column;align-items:flex-start;gap:32px}
+  .contact-row{flex-direction:column;width:100%;gap:2px}
+  .footer-inner{grid-template-columns:1fr;text-align:left;gap:20px}
+  .footer-links{justify-content:flex-start;flex-wrap:wrap;gap:14px 20px}
+  .footer-meta{text-align:left}
+}
+
+.video-modal{
+  position:fixed;inset:0;z-index:10000;
+  display:none;align-items:center;justify-content:center;
+  background:rgba(8,8,8,.92);
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  cursor:pointer;opacity:0;transition:opacity .3s ease;
+}
+.video-modal.active{display:flex;opacity:1}
+.video-modal-inner{position:relative;width:90vw;max-width:960px;aspect-ratio:16/9;cursor:default}
+.video-modal-inner iframe{width:100%;height:100%;border:none;border-radius:2px}
+.video-modal-close{
+  position:absolute;top:-44px;right:0;
+  font-family:var(--mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(239,234,224,.6);background:none;border:none;cursor:pointer;
+  display:flex;align-items:center;gap:8px;transition:color .2s;padding:8px 0;
+}
+.video-modal-close:hover{color:var(--paper)}
+.video-modal-close span{font-size:20px;line-height:1}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <span class="nav-name">Edur Gorospe <em>Roldán</em></span>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#timeline">Path</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-bg">
+    <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- atmospheric sky -->
+        <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#1A1612"/>
+          <stop offset="40%" stop-color="#221C16"/>
+          <stop offset="65%" stop-color="#3A2C22"/>
+          <stop offset="82%" stop-color="#1F1812"/>
+          <stop offset="100%" stop-color="#0E0C09"/>
+        </linearGradient>
+        <radialGradient id="sun" cx="0.74" cy="0.66" r="0.45">
+          <stop offset="0%" stop-color="#E89060" stop-opacity="0.55"/>
+          <stop offset="25%" stop-color="#B85C3C" stop-opacity="0.28"/>
+          <stop offset="55%" stop-color="#B85C3C" stop-opacity="0.08"/>
+          <stop offset="100%" stop-color="#B85C3C" stop-opacity="0"/>
+        </radialGradient>
+
+        <!-- mountain mass fills (silhouettes underneath the contour lines) -->
+        <linearGradient id="m1Fill" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#2C2520"/>
+          <stop offset="100%" stop-color="#1A1611"/>
+        </linearGradient>
+        <linearGradient id="m2Fill" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#241F1A"/>
+          <stop offset="100%" stop-color="#141210"/>
+        </linearGradient>
+        <linearGradient id="m3Fill" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#1A1714"/>
+          <stop offset="100%" stop-color="#0E0C0A"/>
+        </linearGradient>
+        <linearGradient id="m4Fill" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#12100E"/>
+          <stop offset="100%" stop-color="#070605"/>
+        </linearGradient>
+
+        <!-- clipping paths for each mountain mass — contours stay inside their range -->
+        <clipPath id="clipM1">
+          <path d="M0,600 L60,560 L130,580 L200,520 L260,545 L330,490 L400,525 L480,460 L560,510 L640,455 L720,500 L800,440 L880,495 L960,440 L1050,485 L1130,430 L1210,475 L1290,425 L1380,470 L1460,415 L1540,465 L1600,440 L1600,900 L0,900 Z"/>
+        </clipPath>
+        <clipPath id="clipM2">
+          <path d="M0,680 L70,640 L150,660 L240,580 L330,615 L420,540 L520,590 L620,500 L730,565 L820,495 L920,555 L1020,470 L1130,540 L1230,475 L1340,535 L1430,470 L1540,520 L1600,495 L1600,900 L0,900 Z"/>
+        </clipPath>
+        <clipPath id="clipM3">
+          <path d="M0,775 L120,725 L240,755 L380,690 L520,735 L680,680 L840,730 L1000,675 L1160,725 L1320,680 L1460,735 L1600,710 L1600,900 L0,900 Z"/>
+        </clipPath>
+        <clipPath id="clipM4">
+          <path d="M0,860 L180,820 L360,845 L540,810 L720,840 L900,805 L1080,838 L1260,808 L1440,842 L1600,820 L1600,900 L0,900 Z"/>
+        </clipPath>
+
+        <!-- mist between ranges -->
+        <linearGradient id="mist" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#3D2C20" stop-opacity="0.35"/>
+          <stop offset="100%" stop-color="#3D2C20" stop-opacity="0"/>
+        </linearGradient>
+
+        <!-- film grain -->
+        <filter id="grain">
+          <feTurbulence type="fractalNoise" baseFrequency="1.2" numOctaves="2" stitchTiles="stitch"/>
+          <feColorMatrix values="0 0 0 0 0.95
+                                 0 0 0 0 0.88
+                                 0 0 0 0 0.78
+                                 0 0 0 0.10 0"/>
+        </filter>
+      </defs>
+
+      <!-- SKY -->
+      <rect width="1600" height="900" fill="url(#sky)"/>
+      <rect width="1600" height="900" fill="url(#sun)"/>
+
+      <!-- horizon glow line -->
+      <rect x="0" y="585" width="1600" height="1" fill="#E89060" opacity="0.30"/>
+      <rect x="0" y="583" width="1600" height="3" fill="#B85C3C" opacity="0.10"/>
+
+      <!-- distant stars -->
+      <g fill="#EFEAE0" opacity="0.5">
+        <circle cx="180" cy="120" r="0.7"/>
+        <circle cx="420" cy="80" r="1.0"/>
+        <circle cx="560" cy="200" r="0.5"/>
+        <circle cx="780" cy="60" r="0.8"/>
+        <circle cx="950" cy="160" r="0.4"/>
+        <circle cx="1180" cy="100" r="0.9"/>
+        <circle cx="1320" cy="220" r="0.5"/>
+        <circle cx="1450" cy="140" r="0.7"/>
+        <circle cx="260" cy="260" r="0.4"/>
+        <circle cx="640" cy="320" r="0.5"/>
+        <circle cx="1080" cy="280" r="0.5"/>
+        <circle cx="90" cy="190" r="0.5"/>
+        <circle cx="850" cy="380" r="0.4"/>
+      </g>
+
+      <!-- ─── RANGE 1 (farthest) ───────────────────────────── -->
+      <path d="M0,600 L60,560 L130,580 L200,520 L260,545 L330,490 L400,525 L480,460 L560,510 L640,455 L720,500 L800,440 L880,495 L960,440 L1050,485 L1130,430 L1210,475 L1290,425 L1380,470 L1460,415 L1540,465 L1600,440 L1600,900 L0,900 Z"
+            fill="url(#m1Fill)"/>
+      <!-- contour lines on range 1 — soft, low contrast, far away -->
+      <g clip-path="url(#clipM1)" stroke="#5C4838" fill="none" stroke-width="0.5" opacity="0.45">
+        <path d="M-50,610 Q200,540 400,560 T800,500 T1200,500 T1650,490"/>
+        <path d="M-50,640 Q200,580 400,600 T800,540 T1200,540 T1650,530"/>
+        <path d="M-50,680 Q200,620 400,640 T800,580 T1200,580 T1650,570"/>
+        <path d="M-50,720 Q200,660 400,680 T800,620 T1200,620 T1650,610"/>
+        <path d="M-50,760 Q200,700 400,720 T800,660 T1200,660 T1650,650"/>
+        <path d="M-50,800 Q200,740 400,760 T800,700 T1200,700 T1650,690"/>
+      </g>
+
+      <!-- mist between range 1 & 2 -->
+      <rect x="0" y="540" width="1600" height="160" fill="url(#mist)"/>
+
+      <!-- ─── RANGE 2 (mid) ────────────────────────────────── -->
+      <path d="M0,680 L70,640 L150,660 L240,580 L330,615 L420,540 L520,590 L620,500 L730,565 L820,495 L920,555 L1020,470 L1130,540 L1230,475 L1340,535 L1430,470 L1540,520 L1600,495 L1600,900 L0,900 Z"
+            fill="url(#m2Fill)"/>
+
+      <!-- contour lines on range 2 — denser, more defined, follow peak shapes -->
+      <g clip-path="url(#clipM2)" stroke="#6B5440" fill="none" stroke-width="0.6" opacity="0.55">
+        <path d="M-50,690 Q180,640 330,615 Q500,590 620,500 Q740,575 820,495 Q900,560 1020,470 Q1140,545 1230,475 Q1340,540 1430,470 Q1530,520 1650,500"/>
+        <path d="M-50,720 Q180,665 330,640 Q500,615 620,535 Q740,605 820,530 Q900,590 1020,505 Q1140,575 1230,510 Q1340,570 1430,505 Q1530,550 1650,530"/>
+        <path d="M-50,750 Q180,695 330,670 Q500,645 620,575 Q740,640 820,570 Q900,625 1020,545 Q1140,610 1230,550 Q1340,605 1430,545 Q1530,585 1650,565"/>
+        <path d="M-50,780 Q180,730 330,705 Q500,680 620,615 Q740,675 820,610 Q900,660 1020,585 Q1140,645 1230,590 Q1340,640 1430,585 Q1530,620 1650,600"/>
+        <path d="M-50,810 Q180,765 330,740 Q500,715 620,655 Q740,710 820,650 Q900,695 1020,625 Q1140,680 1230,630 Q1340,675 1430,625 Q1530,655 1650,635"/>
+        <path d="M-50,840 Q180,800 330,775 Q500,750 620,695 Q740,745 820,690 Q900,730 1020,665 Q1140,715 1230,670 Q1340,710 1430,665 Q1530,690 1650,670"/>
+      </g>
+
+      <!-- subtle sun-lit ridges on range 2 peaks (right side catching warm light) -->
+      <g stroke="#B85C3C" fill="none" opacity="0.45">
+        <path d="M620,500 L660,530 L700,548" stroke-width="0.8"/>
+        <path d="M820,495 L860,524 L900,544" stroke-width="0.8"/>
+        <path d="M1020,470 L1062,502 L1100,524" stroke-width="0.9"/>
+        <path d="M1230,475 L1272,506 L1310,528" stroke-width="0.8"/>
+        <path d="M1430,470 L1470,500 L1510,520" stroke-width="0.7"/>
+      </g>
+
+      <!-- mist between range 2 & 3 -->
+      <rect x="0" y="640" width="1600" height="120" fill="url(#mist)" opacity="0.8"/>
+
+      <!-- ─── RANGE 3 (front) ──────────────────────────────── -->
+      <path d="M0,775 L120,725 L240,755 L380,690 L520,735 L680,680 L840,730 L1000,675 L1160,725 L1320,680 L1460,735 L1600,710 L1600,900 L0,900 Z"
+            fill="url(#m3Fill)"/>
+
+      <!-- contour lines on range 3 — sharpest, most visible, closer = more detail -->
+      <g clip-path="url(#clipM3)" stroke="#7E6248" fill="none" stroke-width="0.7" opacity="0.65">
+        <path d="M-50,785 Q120,735 240,760 Q310,720 380,695 Q450,720 520,738 Q600,690 680,683 Q760,720 840,733 Q920,685 1000,678 Q1080,720 1160,728 Q1240,685 1320,683 Q1390,720 1460,738 Q1530,720 1650,715"/>
+        <path d="M-50,810 Q120,765 240,790 Q310,755 380,730 Q450,755 520,768 Q600,725 680,718 Q760,755 840,763 Q920,720 1000,713 Q1080,755 1160,760 Q1240,720 1320,718 Q1390,755 1460,768 Q1530,755 1650,750"/>
+        <path d="M-50,835 Q120,795 240,820 Q310,790 380,765 Q450,790 520,798 Q600,760 680,753 Q760,790 840,793 Q920,755 1000,748 Q1080,790 1160,790 Q1240,755 1320,753 Q1390,790 1460,798 Q1530,790 1650,785"/>
+        <path d="M-50,860 Q120,825 240,850 Q310,825 380,800 Q450,825 520,828 Q600,795 680,788 Q760,825 840,823 Q920,790 1000,783 Q1080,825 1160,820 Q1240,790 1320,788 Q1390,825 1460,828 Q1530,825 1650,820"/>
+      </g>
+
+      <!-- sunlit ridge lines on range 3 -->
+      <g stroke="#C97A5A" fill="none" opacity="0.55">
+        <path d="M380,690 L420,710 L460,724" stroke-width="0.9"/>
+        <path d="M680,680 L724,700 L770,716" stroke-width="1"/>
+        <path d="M1000,675 L1044,695 L1090,712" stroke-width="1"/>
+        <path d="M1320,680 L1362,700 L1400,716" stroke-width="0.9"/>
+      </g>
+
+      <!-- ─── RANGE 4 (closest / foreground) ──────────────── -->
+      <path d="M0,860 L180,820 L360,845 L540,810 L720,840 L900,805 L1080,838 L1260,808 L1440,842 L1600,820 L1600,900 L0,900 Z"
+            fill="url(#m4Fill)"/>
+
+      <!-- contour lines on range 4 — very fine, dense, near -->
+      <g clip-path="url(#clipM4)" stroke="#8A6A4E" fill="none" stroke-width="0.6" opacity="0.55">
+        <path d="M-50,868 Q180,825 360,848 Q450,825 540,813 Q630,825 720,843 Q810,810 900,808 Q990,825 1080,840 Q1170,810 1260,810 Q1350,825 1440,845 Q1530,825 1650,825"/>
+        <path d="M-50,885 Q180,855 360,872 Q450,855 540,845 Q630,855 720,870 Q810,845 900,843 Q990,855 1080,868 Q1170,845 1260,845 Q1350,855 1440,872 Q1530,855 1650,855"/>
+      </g>
+
+      <!-- foreground silhouette ridge highlight (closest peaks getting last sun) -->
+      <g stroke="#B85C3C" fill="none" opacity="0.35">
+        <path d="M180,820 L220,830" stroke-width="0.7"/>
+        <path d="M540,810 L585,824" stroke-width="0.7"/>
+        <path d="M900,805 L948,818" stroke-width="0.7"/>
+        <path d="M1260,808 L1305,822" stroke-width="0.7"/>
+      </g>
+
+      <!-- film grain overlay -->
+      <rect width="1600" height="900" filter="url(#grain)" opacity="0.45"/>
+
+      <!-- final vignette darken at very edges -->
+      <radialGradient id="vig" cx="0.5" cy="0.5" r="0.85">
+        <stop offset="60%" stop-color="#000" stop-opacity="0"/>
+        <stop offset="100%" stop-color="#000" stop-opacity="0.45"/>
+      </radialGradient>
+      <rect width="1600" height="900" fill="url(#vig)"/>
+    </svg>
+  </div>
+  <div class="hero-left">
+    <div class="hero-marks hero-anim">
+      <div class="left">
+        <span class="small">Innsbruck / San Sebastian</span>
+      </div>
+      <span class="small">N° 01 — Intro</span>
+    </div>
+
+    <div class="hero-name-block">
+      <div class="hero-eyebrow hero-anim">Performance Marketing · Brand · Creative Production</div>
+      <h1 class="hero-name hero-anim">
+        <span class="ln">Edur</span>
+        <span class="ln">Gorospe</span>
+        <span class="ln roldan">Roldán.</span>
+      </h1>
+      <p class="hero-descriptor hero-anim">
+        <strong>Performance and brand marketing manager.</strong> Six years building global campaigns where data, creative and production meet, and move the numbers.
+      </p>
+      <div class="hero-actions hero-anim">
+        <a href="#work" class="btn btn-primary">See my work <span class="arrow">→</span></a>
+        <a href="#contact" class="btn btn-ghost">Get in touch <span class="arrow">↗</span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="portrait">
+      <img src="images/portrait-full.jpg" alt="Edur Gorospe Roldán">
+    </div>
+  </div>
+</section>
+
+<div class="brands">
+  <div class="brands-head">
+    <span class="label">Brands &amp; partners</span>
+    <span class="count">N° 02 / Index</span>
+  </div>
+  <div class="brands-marquee">
+    <span>HEAD</span><span class="sep">✦</span>
+    <span>PORSCHE</span><span class="sep">✦</span>
+    <span>BOA</span><span class="sep">✦</span>
+    <span>TERNUA</span><span class="sep">✦</span>
+    <span>FLYING KIWI</span><span class="sep">✦</span>
+    <span>FWT</span><span class="sep">✦</span>
+    <span>HEAD</span><span class="sep">✦</span>
+    <span>PORSCHE</span><span class="sep">✦</span>
+    <span>BOA</span><span class="sep">✦</span>
+    <span>TERNUA</span><span class="sep">✦</span>
+    <span>FLYING KIWI</span><span class="sep">✦</span>
+    <span>FWT</span><span class="sep">✦</span>
+  </div>
+</div>
+
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-left">
+      <span class="eyebrow">N° 02 — About</span>
+      <h2 class="fade-up" style="margin-top:32px;">Who<br>I <em>am.</em></h2>
+    </div>
+    <div class="about-right">
+      <div class="about-text fade-up">
+        <p>Performance and brand marketing manager based in Innsbruck. Over six years running global campaigns for a premium consumer brand. Planning and managing paid media across Meta, Google and YouTube, leading social strategy across multiple channels and markets, and directing talent and creator programs at scale.</p>
+        <p>End-to-end on the production side too: from concept and location scouting to coordinating shoots, executive-producing films and shipping branded content. I work across the full funnel: strategy, creative, paid, production and reporting, reading the numbers before, during and after every launch.</p>
+      </div>
+      <div class="about-stats fade-up">
+        <div class="about-stats-head">
+          <span class="eyebrow no-rule" style="color:var(--copper);">By the numbers</span>
+          <span class="folio">— Last 6 years</span>
+        </div>
+        <div class="about-stats-row">
+          <div class="stat-cell">
+            <div class="stat-val">300<em>M</em>+</div>
+            <div class="stat-lbl">Impressions</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-val">~1<em>M</em></div>
+            <div class="stat-lbl">Community</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-val">10<em>%</em></div>
+            <div class="stat-lbl">Peak engagement</div>
+          </div>
+          <div class="stat-cell">
+            <div class="stat-val">6<em>+</em></div>
+            <div class="stat-lbl">Years in role</div>
+          </div>
+        </div>
+      </div>
+      <div class="about-grid fade-up">
+        <div class="about-cell">
+          <span class="about-cell-num">01</span>
+          <div class="about-cell-label">Based</div>
+          <div class="about-cell-val">Innsbruck<small>Austria</small></div>
+        </div>
+        <div class="about-cell">
+          <span class="about-cell-num">02</span>
+          <div class="about-cell-label">Languages</div>
+          <div class="about-cell-val">ES · EU · EN · DE<small>Spanish & Basque · Native</small><small>English C1 · German B2</small></div>
+        </div>
+        <div class="about-cell">
+          <span class="about-cell-num">03</span>
+          <div class="about-cell-label">Education</div>
+          <div class="about-cell-val">BBA — Deusto<small>Universidad de Deusto, San Sebastian</small><small>BSc Computer Science · Ongoing</small></div>
+        </div>
+        <div class="about-cell">
+          <span class="about-cell-num">04</span>
+          <div class="about-cell-label">Core toolkit</div>
+          <div class="about-cell-val">Meta · Google · GA4<small>Paid media & analytics</small><small>AI workflows · Adobe CC</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="timeline" id="timeline">
+  <div class="timeline-inner">
+    <div class="timeline-head">
+      <div class="col-l">
+        <span class="eyebrow">N° 03 — Career</span>
+        <h2 class="section-title" style="margin-top:32px;">The <em>path</em><br>here.</h2>
+      </div>
+      <div class="col-r">
+        <p>From business school to leading global marketing for a premium consumer brand. Each step added a layer of understanding of how brands actually grow.</p>
+        <span class="folio">Index — 2013 → Present</span>
+      </div>
+    </div>
+
+    <div class="tl-items">
+
+      <div class="tl-item">
+        <div class="tl-year-block">
+          <span>2023 — Now</span>
+          <span class="tag">Current role</span>
+        </div>
+        <div class="tl-content">
+          <h3>Marketing Manager</h3>
+          <div class="tl-company">HEAD GmbH — global premium consumer brand · Austria</div>
+          <p class="tl-desc">Lead B2C marketing and paid media across global markets. Plan and manage Meta, Google and YouTube Ads campaigns for product launches and seasonal activations, reaching audiences in EU, NA, JP and APAC. Own editorial strategy across 8+ social channels, executive-produce branded films, and direct talent and ambassador programs end-to-end.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year-block">
+          <span>2022 — 2023</span>
+          <span class="tag">Promotion</span>
+        </div>
+        <div class="tl-content">
+          <h3>Social Media &amp; Content Manager</h3>
+          <div class="tl-company">HEAD GmbH · Austria</div>
+          <p class="tl-desc">Owned the social and content engine: editorial calendar across Instagram, YouTube, Facebook and LinkedIn, talent and creator programs, on-set production for brand films and seasonal campaigns. Drove community to ~1M and peak engagement to 10%. The bridge into the marketing manager role.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year-block">
+          <span>2019 — 2022</span>
+          <span class="tag">Sponsored athlete</span>
+        </div>
+        <div class="tl-content">
+          <h3>Competitive Athlete</h3>
+          <div class="tl-company">Sponsored by HEAD · International circuit, Europe</div>
+          <p class="tl-desc">Three years competing at international level on a sponsored athlete program. Lived sponsorship dynamics, talent management and brand-athlete partnerships from the other side of the table. The foundation for the marketing career that followed.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year-block">
+          <span>2018 — 2019</span>
+          <span class="tag">New Zealand</span>
+        </div>
+        <div class="tl-content">
+          <h3>Marketing &amp; Content Creator</h3>
+          <div class="tl-company">Flying Kiwi Adventure Tours · Queenstown, NZ</div>
+          <p class="tl-desc">Created digital and visual content and assisted in marketing campaigns for an adventure tourism brand across New Zealand. First exposure to running content end-to-end for a small marketing team on the other side of the world.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year-block">
+          <span>2017 — 2019</span>
+          <span class="tag">Coaching</span>
+        </div>
+        <div class="tl-content">
+          <h3>Instructor &amp; Coach</h3>
+          <div class="tl-company">KIROLENE · FESURF · Spain &amp; Alps</div>
+          <p class="tl-desc">Certified instructor coaching across ability levels. Learned how to break complex skills into simple steps, manage groups, and earn trust quickly. Transferable wherever people and process meet.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-year-block">
+          <span>2013 — 2017</span>
+          <span class="tag">Education</span>
+        </div>
+        <div class="tl-content">
+          <h3>BBA — Business Administration &amp; Management</h3>
+          <div class="tl-company">Universidad de Deusto · San Sebastian, Spain</div>
+          <p class="tl-desc">Business fundamentals: strategy, finance, marketing. Grounding the creative and strategic work that followed.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="skills" id="skills">
+  <div class="skills-inner">
+    <div class="skills-left">
+      <span class="eyebrow">N° 04 — Skills</span>
+      <h2>What<br>I <em>know.</em></h2>
+      <p>Six years across paid media, brand strategy and creative production. I learned to plan the buy, produce the content and read the data, because the best results come when it's all connected.</p>
+    </div>
+    <div class="skills-right">
+      <div class="skill-group fade-up">
+        <div class="skill-group-head">
+          <span class="skill-group-label">Paid Media &amp; Analytics</span>
+          <span class="skill-group-num">01 / 04</span>
+        </div>
+        <div class="skill-pills">
+          <span class="pill">Meta Ads Manager</span>
+          <span class="pill">Google Ads</span>
+          <span class="pill">YouTube Ads</span>
+          <span class="pill">TikTok Ads</span>
+          <span class="pill">Google Analytics 4</span>
+          <span class="pill">Meta Pixel &amp; Events API</span>
+          <span class="pill">Reporting &amp; attribution</span>
+          <span class="pill">A/B testing</span>
+        </div>
+      </div>
+      <div class="skill-group fade-up">
+        <div class="skill-group-head">
+          <span class="skill-group-label">Brand &amp; Campaign</span>
+          <span class="skill-group-num">02 / 04</span>
+        </div>
+        <div class="skill-pills">
+          <span class="pill">Brand strategy</span>
+          <span class="pill">Campaign management</span>
+          <span class="pill">Go-to-market</span>
+          <span class="pill">Product launch</span>
+          <span class="pill">Co-marketing &amp; partnerships</span>
+          <span class="pill">Creative direction</span>
+          <span class="pill">Project management</span>
+        </div>
+      </div>
+      <div class="skill-group fade-up">
+        <div class="skill-group-head">
+          <span class="skill-group-label">Content &amp; Production</span>
+          <span class="skill-group-num">03 / 04</span>
+        </div>
+        <div class="skill-pills">
+          <span class="pill">Premiere Pro</span>
+          <span class="pill">After Effects</span>
+          <span class="pill">Lightroom</span>
+          <span class="pill">Photoshop</span>
+          <span class="pill">InDesign</span>
+          <span class="pill">Photography</span>
+          <span class="pill">Executive producer</span>
+          <span class="pill">Shoot management</span>
+        </div>
+      </div>
+      <div class="skill-group fade-up">
+        <div class="skill-group-head">
+          <span class="skill-group-label">Social, Talent &amp; Tools</span>
+          <span class="skill-group-num">04 / 04</span>
+        </div>
+        <div class="skill-pills">
+          <span class="pill">Instagram</span>
+          <span class="pill">TikTok</span>
+          <span class="pill">YouTube</span>
+          <span class="pill">LinkedIn</span>
+          <span class="pill">Sprout Social</span>
+          <span class="pill">Later</span>
+          <span class="pill">Talent &amp; creator programs</span>
+          <span class="pill">Notion · Asana</span>
+          <span class="pill">AI workflows (Claude, ChatGPT)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="work on-dark" id="work">
+  <div class="work-inner">
+    <div class="section-top">
+      <div class="col-l">
+        <span class="eyebrow" style="color:var(--copper2);">N° 05 — Selected work</span>
+        <h2 class="section-title">Campaign<br><em>highlights.</em></h2>
+      </div>
+      <div class="col-r">
+        <div class="work-count">06<small>Featured projects</small></div>
+        <p class="work-lead">Global product launches, premium co-marketing, brand films and community-led campaigns from the past six years.</p>
+      </div>
+    </div>
+
+    <div class="campaigns">
+
+      <article class="campaign">
+        <div class="campaign-cover">
+          <img src="images/kore-cover-2.jpg" alt="">
+        </div>
+        <div class="campaign-info">
+          <div class="campaign-meta">
+            <span>2024</span><span class="dot"></span><span class="type">Global product launch · Film</span>
+          </div>
+          <h3>KORE — Global Product Launch</h3>
+          <p>Flagship category relaunch for HEAD. Owned brand and creative direction, ran a multi-market talent program, and led paid amplification across EU and global markets. Tens of millions of impressions and a top-performing launch in the category.</p>
+          <div class="campaign-tags">
+            <span class="c-tag">Campaign lead</span>
+            <span class="c-tag">Paid media</span>
+            <span class="c-tag">Talent program</span>
+            <span class="c-tag">Multi-market</span>
+          </div>
+          <div class="campaign-actions">
+            <a href="#" class="campaign-action yt" data-video="https://www.youtube.com/embed/32_ohASGOuM" onclick="openVideo(this);return false">Watch film <span class="arrow">▶</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="campaign">
+        <div class="campaign-cover">
+          <img src="images/fwt.partner.jpg" alt="">
+        </div>
+        <div class="campaign-info">
+          <div class="campaign-meta">
+            <span>2024</span><span class="dot"></span><span class="type">Sponsorship · Communication</span>
+          </div>
+          <h3>FWT × HEAD &amp; TYROLIA — Sponsorship Partnership</h3>
+          <p>Multi-year communication strategy and PR for a global sponsorship partnership with an international event property. Owned partner relations, media roll-out across markets and the connected talent program.</p>
+          <div class="campaign-tags">
+            <span class="c-tag">Partnerships</span>
+            <span class="c-tag">PR</span>
+            <span class="c-tag">Comms strategy</span>
+            <span class="c-tag">Talent program</span>
+          </div>
+          <div class="campaign-actions">
+            <a href="#" class="campaign-action yt" data-video="https://www.youtube.com/embed/ESY_KkJlBDE" onclick="openVideo(this);return false">Watch film <span class="arrow">▶</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="campaign">
+        <div class="campaign-cover">
+          <img src="images/ooto-cover.jpg" alt="">
+        </div>
+        <div class="campaign-info">
+          <div class="campaign-meta">
+            <span>2022–25</span><span class="dot"></span><span class="type">Brand film series</span>
+          </div>
+          <h3>Unified, Beyond &amp; Out of the Ordinary — Brand Film Series</h3>
+          <p>Executive Producer of the annual brand documentary series. Involved in: production, location scouting, shoot management, talent, post and distribution across owned, paid and partner channels.</p>
+          <div class="campaign-tags">
+            <span class="c-tag">Executive producer</span>
+            <span class="c-tag">Brand film</span>
+            <span class="c-tag">Production lead</span>
+            <span class="c-tag">Annual series</span>
+          </div>
+          <div class="campaign-actions">
+            <a href="#" class="campaign-action yt" data-video="https://youtube.com/embed/EcUqSVpkirE" onclick="openVideo(this);return false">Watch film <span class="arrow">▶</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="campaign">
+        <div class="campaign-cover">
+          <img src="images/kaliber-cover.jpg" alt="">
+        </div>
+        <div class="campaign-info">
+          <div class="campaign-meta">
+            <span>2024</span><span class="dot"></span><span class="type">Co-branded launch</span>
+          </div>
+          <h3>KALIBER × BOA — Co-Branded Product Launch</h3>
+          <p>First-of-its-kind co-branded product collaboration with BOA Technology. Studio production, hero assets, communication plan and retail roll-out across performance and lifestyle markets.</p>
+          <div class="campaign-tags">
+            <span class="c-tag">Co-branding</span>
+            <span class="c-tag">Studio production</span>
+            <span class="c-tag">Product launch</span>
+            <span class="c-tag">Retail rollout</span>
+          </div>
+          <div class="campaign-actions">
+            <a href="#" class="campaign-action yt" data-video="https://www.youtube.com/embed/dz0JI02Pcj4" onclick="openVideo(this);return false">Watch film <span class="arrow">▶</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="campaign">
+        <div class="campaign-cover">
+          <img src="images/porsche-cover.jpg" alt="">
+        </div>
+        <div class="campaign-info">
+          <div class="campaign-meta">
+            <span>2023</span><span class="dot"></span><span class="type">Premium co-marketing</span>
+          </div>
+          <h3>Porsche × HEAD — Premium Cross-Partnership</h3>
+          <p>Premium co-marketing campaign with Porsche. Cross-brand positioning that elevated both worlds without diluting either, distributed through joint owned and paid channels.</p>
+          <div class="campaign-tags">
+            <span class="c-tag">Co-marketing</span>
+            <span class="c-tag">Brand strategy</span>
+            <span class="c-tag">Premium positioning</span>
+            <span class="c-tag">Multi-channel</span>
+          </div>
+          <div class="campaign-actions">
+            <a href="#" class="campaign-action yt" data-video="https://www.youtube.com/embed/C8NNXpwfSJw" onclick="openVideo(this);return false">Watch film <span class="arrow">▶</span></a>
+          </div>
+        </div>
+      </article>
+
+      <article class="campaign">
+        <div class="campaign-cover">
+          <img src="images/oblivion-cover.jpg" alt="">
+        </div>
+        <div class="campaign-info">
+          <div class="campaign-meta">
+            <span>2023</span><span class="dot"></span><span class="type">Community campaign</span>
+          </div>
+          <h3>Downdays — Community-Driven Brand Campaign</h3>
+          <p>Community-first campaign with culture publisher Downdays. Talent-led storytelling and UGC distributed through owned and community channels, building credibility with a hard-to-reach audience.</p>
+          <div class="campaign-tags">
+            <span class="c-tag">Community</span>
+            <span class="c-tag">UGC</span>
+            <span class="c-tag">Talent-led</span>
+            <span class="c-tag">Editorial partnership</span>
+          </div>
+          <div class="campaign-actions">
+            <a href="#" class="campaign-action yt" data-video="https://www.youtube.com/embed/y-vLExentfw" onclick="openVideo(this);return false">Watch film <span class="arrow">▶</span></a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="contact on-dark" id="contact">
+  <div class="contact-compact">
+    <div class="contact-left">
+      <span class="eyebrow" style="color:var(--copper2);">N° 06 — Get in touch</span>
+      <h2 style="margin-top:24px;">Let's <em>talk.</em></h2>
+    </div>
+    <div class="contact-row">
+      <a href="/cdn-cgi/l/email-protection#7d1819080f1a0f3d1a101c1411531e1210" class="contact-chip">
+        <span class="contact-chip-label">Email</span>
+        <span class="contact-chip-val"><span class="__cf_email__" data-cfemail="cbaeafbeb9acb98baca6aaa2a7e5a8a4a6">[email&#160;protected]</span></span>
+      </a>
+      <a href="https://www.linkedin.com/in/edur-gorospe-roldan-778936153/" target="_blank" class="contact-chip">
+        <span class="contact-chip-label">LinkedIn</span>
+        <span class="contact-chip-val">Edur Gorospe Roldán</span>
+      </a>
+      <div class="contact-chip">
+        <span class="contact-chip-label">Based</span>
+        <span class="contact-chip-val">Innsbruck, Austria</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="video-modal" id="videoModal" onclick="closeVideo(event)">
+  <div class="video-modal-inner" onclick="event.stopPropagation()">
+    <button class="video-modal-close" onclick="closeVideo(event)"><span>✕</span> Close</button>
+    <iframe id="videoFrame" src="" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <span class="footer-name">Edur <em>Gorospe Roldán</em></span>
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#timeline">Path</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <span class="footer-meta">© 2026 · Innsbruck</span>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+document.body.classList.add('js');
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting){
+      e.target.classList.add('visible');
+      io.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
+document.querySelectorAll('.fade-up, .campaign, .tl-item').forEach((el, i) => {
+  if (el.classList.contains('campaign')) el.style.transitionDelay = ((i % 6) * 0.07) + 's';
+  if (el.classList.contains('tl-item')) el.style.transitionDelay = ((i % 6) * 0.06) + 's';
+  io.observe(el);
+});
+const nav = document.getElementById('nav');
+const onScroll = () => {
+  if (window.scrollY > 80) nav.classList.add('scrolled');
+  else nav.classList.remove('scrolled');
+};
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+function openVideo(el){
+  const url = el.getAttribute('data-video');
+  if(!url) return;
+  const modal = document.getElementById('videoModal');
+  const frame = document.getElementById('videoFrame');
+  const sep = url.includes('?') ? '&' : '?';
+  frame.src = url + sep + 'autoplay=1&rel=0';
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeVideo(e){
+  const modal = document.getElementById('videoModal');
+  const frame = document.getElementById('videoFrame');
+  frame.src = '';
+  modal.classList.remove('active');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeVideo(); });
+</script>
+</body>
+</html>
